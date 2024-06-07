@@ -3,9 +3,11 @@ project(02p2p)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(server server.cpp
-        header.h)
+add_executable(server
+        server.cpp
+        server.h)
 
-add_executable(client client.cpp
-        header.h)
+add_executable(client
+        client.cpp
+        client.h)
 

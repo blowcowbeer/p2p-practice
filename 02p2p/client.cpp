@@ -1,12 +1,12 @@
-#include "header.h"
+#include "client.h"
 
 int main(int argc, char* argv[]) {
-    if (argc < 3) {
-        cout << "Usage: <Client> <IP> <Port>" << endl;
+    if (argc < 4) {
+        cout << "Usage: <Client> <IP> <Port> <ID>" << endl;
         return -1;
     }
-
-    Client client;
+    int id = atoi(argv[3]);
+    Client client(id);
     if (!client.init()) {
         cout << "client init failed" << endl;
         return -1;
